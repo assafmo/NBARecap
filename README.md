@@ -12,12 +12,12 @@ sudo chmod +x /usr/local/bin/espn_nba_recaps /usr/local/bin/nba_com_recaps
 # Usage Examples
 ```bash
 # Print today's links
-espn_nba_recaps
+$ espn_nba_recaps
 
 # Print today's links
-nba_com_recaps
+$ nba_com_recaps
 
 # Download and start watching immediately (usually faster)
-espn_nba_recaps | xargs -n 1 aria2c -c -s 8 -x 8 -k 1M --stream-piece-selector=inorder
-nba_com_recaps | xargs -n 1 aria2c -c -s 8 -x 8 -k 1M --stream-piece-selector=inorder
+$ espn_nba_recaps | xargs -n 1 aria2c -c -s 8 -x 8 -k 1M --stream-piece-selector=inorder
+$ nba_com_recaps | xargs -n 1 aria2c -c -s 8 -x 8 -k 1M --stream-piece-selector=inorder
 ```
