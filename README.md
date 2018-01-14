@@ -17,7 +17,7 @@ espn_nba_recaps
 # Print today's links
 nba_com_recaps
 
-# Download and start watching immediately (usually faster)
+# Download and can start watching immediately from filesystem (usually faster)
 espn_nba_recaps | xargs -n 1 aria2c -c -s 8 -x 8 -k 1M --stream-piece-selector=inorder
 nba_com_recaps | xargs -n 1 aria2c -c -s 8 -x 8 -k 1M --stream-piece-selector=inorder
 ```
