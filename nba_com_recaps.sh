@@ -25,5 +25,5 @@ echo "$xmls" | \
 xargs -n 1 curl -s --compressed | \
 grep -Po 'http://nba.cdn.turner.com/nba/big/video/.+?\.mp4' | \
 grep -v '["<>]' | \
-grep 1080 | \
+grep -F 'x1080_' | \
 sort -u
