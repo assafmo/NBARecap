@@ -23,7 +23,7 @@ head -"$num_of_games" \
 
 echo "$xmls" | \
 xargs -n 1 curl -s --compressed | \
-grep -Po 'http://nba.cdn.turner.com/nba/big/video/.+?\.mp4' | \
+grep -Po 'https://ssl.cdn.turner.com/nba/big/video/.+?\.mp4' | \
 grep -v '["<>]' | \
 grep -F 'x1080_' | \
 sort -u
