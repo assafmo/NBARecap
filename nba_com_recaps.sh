@@ -25,5 +25,5 @@ echo "$xmls" |
     xargs -n 1 curl -L -s --compressed |
     tr '><' '\n' |
     grep -P '.mp4$' |
-    grep -F 'x720_' |
+    grep -F 'x1080_' |
     sort -u
