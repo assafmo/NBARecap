@@ -11,7 +11,7 @@ num_of_games=$(
 )
 
 xmls=$(
-    curl 'http://www.nba.com/video/gamerecaps' -L -s --compressed |
+    curl 'https://www.nba.com/video/gamerecaps' -L -s --compressed |
         grep -Po 'collection_uuid":".+?"' |
         awk -F '"' '{print $3}' |
         xargs -I {} -n 1 curl -L -s --compressed https://api.nba.net/0/league/collection/{} |
