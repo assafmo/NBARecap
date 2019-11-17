@@ -23,7 +23,7 @@ xmls=$(
 
 echo "$xmls" |
     xargs -n 1 curl -L -s --compressed |
-    grep -Po 'https://ssl.cdn.turner.com/nba/big/video/.+?\.mp4' |
-    grep -v '["<>]' |
-    grep -F 'x1080_' |
+    tr '><' '\n' |
+    grep -P '.mp4$' |
+    grep -F 'x720_' |
     sort -u
